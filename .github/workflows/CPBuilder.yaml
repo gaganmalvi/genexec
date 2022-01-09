@@ -36,6 +36,7 @@ jobs:
             type: 'zip'
             filename: 'release.zip'
             path: 'build/*'
+            exclusions: 'build/CMakeCache.txt build/cmake_install.cmake build/CMakeFiles/* build/Makefile'
 
       - uses: actions/upload-artifact@v2
         with:
