@@ -29,3 +29,15 @@ jobs:
 
       - name: Build
         run: cmake --build build
+
+      - name: Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+            type: 'zip'
+            filename: 'release.zip'
+            path: 'build/*'
+
+      - uses: actions/upload-artifact@v2
+        with:
+            name: release-${{ matrix.os }}
+            path: release.zip
