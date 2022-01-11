@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project(genexec)
 
+set(CMAKE_BUILD_TYPE "Release")
+
 file(GLOB SRC_FILES *.cpp)
 
 if (UNIX)

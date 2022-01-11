@@ -30,7 +30,7 @@ jobs:
         run: cmake -Bbuild .
 
       - name: Build
-        run: cmake --build build
+        run: cmake --build build --config Release
 
       - name: Archive Release
         uses: thedoctor0/zip-release@master
